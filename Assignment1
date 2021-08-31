@@ -1,0 +1,86 @@
+#Program to check if a given number is armstrong or not.
+
+public class Armstrong 
+
+{
+
+    public static void main(String[] args) 
+{
+
+        int number = 361, originalNumber, remainder, result = 0;
+
+        originalNumber = number;
+
+        while (originalNumber != 0)
+        {
+            remainder = originalNumber % 10;
+            result += Math.pow(remainder, 3);
+            originalNumber /= 10;
+        }
+
+        if(result == number)
+
+             System.out.println(number + " it is an Armstrong number.");
+        else
+            System.out.println(number + " it is not an Armstrong number.");
+    }
+}
+
+
+
+#Write a code to reverse a number.
+
+import java.util.Scanner;
+
+class Reverse
+{
+
+public static void main(String[] arg)
+{
+
+int a,n,res=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a number");
+n=sc.nextInt();
+
+while(n!=0)
+
+{
+
+a=n%10;
+res=(res*10)+a;
+n=n/10;
+
+}
+System.out.println("reverse of a number is "+res);
+}
+}
+
+
+
+# to find 3rd highest value with the help of array.
+
+
+public class ThirdLargestNumber 
+
+{
+   public static void main(String args[])
+{
+   int temp, size;
+   int array[] = {30, 200, 55, 73, 46, 85};
+   size = array.length;
+   
+   for(int i = 0; i<size; i++ ){
+      for(int j = i+1; j<size; j++)
+{
+         if(array[i]>array[j]){
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+
+         }
+      }
+   }
+   System.out.println("Third largest number is:: "+array[size-3]);
+   }
+}
